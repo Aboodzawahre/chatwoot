@@ -15,7 +15,7 @@
 # ------- Branding Related Config ------- #
 - name: INSTALLATION_NAME
   value: 'UniLink'
-  display_title: 'UniLink'
+  display_title: 'Installation Name'
   description: 'The installation wide name that would be used in the dashboard, title etc.'
 - name: LOGO_THUMBNAIL
   value: '/brand-assets/logo_thumbnail.svg'
@@ -39,7 +39,7 @@
   description: 'The URL that would be used in the widget under the section “Powered By”'
 - name: BRAND_NAME
   value: 'UniLink'
-  display_title: 'UniLink'
+  display_title: 'Brand Name'
   description: 'The name that would be used in emails and the widget'
 - name: TERMS_URL
   value: 'https://www.chatwoot.com/terms-of-service'
