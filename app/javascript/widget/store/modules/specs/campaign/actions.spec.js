@@ -49,7 +49,7 @@ describe('#actions', () => {
         { commit },
         {
           websiteToken: 'XDsafmADasd',
-          currentURL: 'https://www.chatwoot.com',
+          currentURL: 'https://www.Linkiva.com',
           isInBusinessHours: true,
         }
       );
@@ -59,7 +59,7 @@ describe('#actions', () => {
   describe('#initCampaigns', () => {
     const actionParams = {
       websiteToken: 'XDsafmADasd',
-      currentURL: 'https://chatwoot.com',
+      currentURL: 'https://Linkiva.com',
     };
     it('sends correct actions if campaigns are empty', async () => {
       await actions.initCampaigns(

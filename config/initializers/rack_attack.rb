@@ -95,7 +95,7 @@ class Rack::Attack
   end
 
   ## Resend confirmation throttling
-  throttle('resend_confirmation/ip', limit: 5, period: 30.minutes) do |req|
+  throttle('resend_confirmation/ip', limit: 15, period: 30.minutes) do |req|
     req.ip if req.path_without_extentions == '/api/v1/profile/resend_confirmation' && req.post?
   end
 
@@ -137,7 +137,7 @@ class Rack::Attack
   ###-----------------------------------------------###
 
   ## Prevent Abuse of Converstion Transcript APIs ###
-  throttle('/api/v1/accounts/:account_id/conversations/:conversation_id/transcript', limit: 30, period: 1.hour) do |req|
+  throttle('/api/v1/accounts/:account_id/conversations/:conversation_id/transcript', limit: 100, period: 1.hour) do |req|
     match_data = %r{/api/v1/accounts/(?<account_id>\d+)/conversations/(?<conversation_id>\d+)/transcript}.match(req.path)
     match_data[:account_id] if match_data.present?
   end
